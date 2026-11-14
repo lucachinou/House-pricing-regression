@@ -10,6 +10,8 @@ csv = pd.read_csv('data.csv')
 size = csv['size'].tolist()
 price = csv['price'].tolist()
 
+torch.manual_seed(42)
+
 perm = torch.randperm(len(size))
 split = int(len(size) * 0.8)
 
